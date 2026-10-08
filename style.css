@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f7f8fc;
+    color: #20243a;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+.cabecalho {
+    background: #4f46e5;
+    color: white;
+    padding: 18px 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 70px 0;
+    background: white;
+}
+
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-conteudo > div {
+    flex: 1;
+}
+
+.hero img {
+    width: min(380px, 90%);
+}
+
+.tag {
+    color: #4f46e5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.15;
+    margin: 12px 0 18px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+.botao,
+button {
+    display: inline-block;
+    border: none;
+    background: #4f46e5;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.beneficios {
+    padding: 65px 0;
+}
+
+.beneficios h2,
+.inscricao h2 {
+    font-size: 34px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.inscricao {
+    background: #ecebff;
+    padding: 65px 0;
+}
+
+.formulario-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bfc2d1;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 18px;
+    width: 100%;
+}
+
+.mensagem {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #20243a;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .hero-conteudo,
+    .formulario-area {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+
+    .hero {
+        padding: 45px 0;
+    }
+
+    .hero img {
+        justify-self: center;
+        width: 250px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+}
